@@ -8,7 +8,7 @@ export const rankStyles: Record<
     },
     Admin: {
         className:
-            "text-purple-400 font-bold animate-pulse drop-shadow-[0_0_8px_rgba(168,85,247,0.9)]",
+            "text-red-400 font-bold animate-pulse drop-shadow-[0_0_8px_rgba(168,85,247,0.9)]",
     },
     Moderator: {
         className:
