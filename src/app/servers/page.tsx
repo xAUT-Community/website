@@ -1,7 +1,11 @@
 import {getMinecraftStatus, getLS22Status, getETS2Status, getBedrockStatus, getCSGOStatus} from "@/lib/serverStatus";
-import {Footer} from "@/components/Footer";
-import {Navbar} from "@/components/Navbar";
 import {ServerCard} from "@/components/ServerStatusCard";
+import {formatPageTitle} from "@/lib/utils";
+
+export const metadata = {
+    title: formatPageTitle("Servers"),
+    description: "xAUT-Community Servers"
+}
 
 export default async function ServersPage() {
     // Beispiel IPs, später anpassen
@@ -54,7 +58,6 @@ export default async function ServersPage() {
 
     return (
         <>
-            <Navbar />
         <main className="p-10 min-h-screen">
             <h1 className="text-4xl font-bold mb-8">Unsere Server</h1>
 
@@ -70,7 +73,6 @@ export default async function ServersPage() {
                 </section>
             ))}
         </main>
-            <Footer />
         </>
     );
 }

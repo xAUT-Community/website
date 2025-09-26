@@ -1,5 +1,4 @@
 import { exampleBlogPosts, BlogPost } from "@/lib/blog";
-import {Navbar} from "@/components/Navbar";
 
 interface BlogPageProps {
     params: Promise<{ slug: string }>;
@@ -16,7 +15,6 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
 
     return (
         <>
-            <Navbar />
         <main className="p-10 min-h-screen">
             <h1 className="text-4xl font-bold text-purple-400 mb-4">{post.title}</h1>
             <p className="text-gray-300 mb-4">

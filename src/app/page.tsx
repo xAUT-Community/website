@@ -1,15 +1,13 @@
 "use client";
 
-import {Navbar} from "@/components/Navbar";
-import {Button} from "@/components/ui/Button";
 import {DiscordButton} from "@/components/DiscordButton";
-import {Footer} from "@/components/Footer";
+import {formatPageTitle} from "@/lib/utils";
+
+
 
 export default function Home() {
     return (
         <>
-            <Navbar />
-
             <main className="flex flex-col items-center justify-center min-h-screen text-center p-6">
                 <h1 className="text-5xl font-bold mb-6">
                     Willkommen bei der <span className="text-5xl text-purple-900">xAUT</span>-<span className="text-5xl text-purple-800">Community.at</span>
@@ -19,8 +17,6 @@ export default function Home() {
                 </p>
                 <DiscordButton />
             </main>
-
-            <Footer />
         </>
     );
 }

@@ -1,8 +1,12 @@
 import Image from "next/image";
 import { teamMembers } from "@/lib/team";
-import {Footer} from "@/components/Footer";
-import {Navbar} from "@/components/Navbar";
 import {TeamCard} from "@/components/TeamCard";
+import {formatPageTitle} from "@/lib/utils";
+
+export const metadata = {
+    title: formatPageTitle("Das Team"),
+    description: "xAUT-Community | Unser Team"
+}
 
 export default function TeamPage() {
     // Team nach Rang gruppieren
@@ -17,8 +21,6 @@ export default function TeamPage() {
 
     return (
         <>
-
-            <Navbar />
 
             <main className="p-10 min-h-screen">
                 <h1 className="text-4xl font-bold text-purple-400 mb-8 text-center">
@@ -44,7 +46,6 @@ export default function TeamPage() {
                 </div>
             </main>
 
-            <Footer />
         </>
     );
 }
