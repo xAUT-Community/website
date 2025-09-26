@@ -11,6 +11,7 @@ export interface BedrockStatus {
     players: { online: number; max: number };
     version: string;
     icon?: string; // Base64 PNG von der API
+    map?: string;
 }
 
 export interface LS22Status {
@@ -28,6 +29,7 @@ export interface CSGOStatus {
 export interface ETS2Status {
     online: boolean;
     players: number;
+    max?: number;
     map?: string;
 }
 
@@ -53,6 +55,7 @@ export async function getBedrockStatus(ip: string, port: number): Promise<Bedroc
         players: data.players || { online: 0, max: 0},
         version: data.version || "Unbekannt",
         icon: data.icon,
+        map: data.map,
     };
 }
 
@@ -83,7 +86,8 @@ export async function getETS2Status(ip: string, port: number): Promise<ETS2Statu
     // Platzhalter: ETS2 MP API muss hier rein
     return {
         online: true,
-        players: Math.floor(Math.random() * 64),
+        players: Math.floor(Math.random() * 256),
+        max: 64,
         map: "Europe Map",
     };
 }

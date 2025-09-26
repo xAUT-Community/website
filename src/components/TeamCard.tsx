@@ -41,6 +41,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
                         width={120}
                         height={120}
                         className="absolute top-0 left-0 rounded-full pointer-events-none select-none"
+                        unoptimized
                     />
                 )}
             </div>

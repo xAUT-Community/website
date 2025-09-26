@@ -5,13 +5,11 @@ import {ServerCard} from "@/components/ServerStatusCard";
 
 export default async function ServersPage() {
     // Beispiel IPs, später anpassen
-    const [mcStatus, hiveBedrock, lbsg, opSucht, opSuchtJava, appleMC] = await Promise.all([
+    const [hypixel, hiveBedrock, lbsg, ets] = await Promise.all([
         getMinecraftStatus("mc.hypixel.net"),
         getBedrockStatus("geo.hivebedrock.network", 19132),
         getBedrockStatus("play.lbsg.net", 19132),
-        getBedrockStatus("opsucht.net", 19132),
-        getMinecraftStatus("opsucht.net"),
-        getMinecraftStatus("hub.havoc.games"),
+        getETS2Status("ets.server.to", 1),
     ]);
 
     // 2️⃣ Server nach Typ gruppieren
@@ -20,27 +18,11 @@ export default async function ServersPage() {
             {
                 name: "Minecraft Server",
                 type: "Minecraft" as const,
-                online: mcStatus.online,
-                players: mcStatus.players,
-                version: mcStatus.version,
-                icon: mcStatus.icon,
+                online: hypixel.online,
+                players: hypixel.players,
+                version: hypixel.version,
+                icon: hypixel.icon,
             },
-            {
-                name: "OPSucht.net",
-                type: "Minecraft" as const,
-                online: opSuchtJava.online,
-                players: opSuchtJava.players,
-                version: opSuchtJava.version,
-                icon: opSuchtJava.icon,
-            },
-            {
-                name: "AppleMC.fun",
-                type: "Minecraft" as const,
-                online: appleMC.online,
-                players: appleMC.players,
-                version: appleMC.version,
-                icon: appleMC.icon,
-            }
         ],
         Bedrock: [
             {
@@ -58,13 +40,14 @@ export default async function ServersPage() {
                 players: lbsg.players,
                 version: lbsg.version,
             },
+        ],
+        ETS2: [
             {
-                name: "OPSucht.net",
-                type: "Bedrock" as const,
-                online: opSucht.online,
-                players: opSucht.players,
-                version: opSucht.version,
-                icon: opSucht.icon,
+                name: "ETS2 Server",
+                type: "ETS2" as const,
+                online: ets.online,
+                players: ets.players,
+                max: ets.max,
             }
         ]
     };

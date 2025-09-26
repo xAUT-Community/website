@@ -9,6 +9,7 @@ interface ServerCardProps {
     players?: { online: number; max: number } | number;
     version?: string; // Minecraft Version oder Map für andere
     icon?: string; // Minecraft Base64 Icon
+    map?: string;
 }
 
 export const ServerCard: React.FC<ServerCardProps> = ({
@@ -18,6 +19,7 @@ export const ServerCard: React.FC<ServerCardProps> = ({
                                                           players,
                                                           version,
                                                           icon,
+    map,
                                                       }) => {
     return (
         <div
@@ -62,6 +64,16 @@ export const ServerCard: React.FC<ServerCardProps> = ({
 
             {/* Version / Map */}
             {version && <p className="text-gray-400">{version}</p>}
+            {type === "ETS2" && players && typeof players !== "number" && (
+                <p className="text-gray-300">Spieler: {players.online} / {players.max}</p>
+            )}
+
+            {type !== "ETS2" && typeof players !== "number" && (
+                <p className="text-gray-300">Spieler: {players?.online}</p>
+            )}
+
+            {/* Version / Map */}
+            {map && <p className="text-gray-400">{map}</p>}
         </div>
     );
 };
