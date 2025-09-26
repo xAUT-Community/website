@@ -33,6 +33,9 @@ export const Navbar = () => {
                     <Link href="/servers" className="hover:text-purple-300 transition">
                         Server
                     </Link>
+                    <Link href="/das-team" className="hover:text-purple-300 transition">
+                        Das Team
+                    </Link>
                     <Link href="/support" className="hover:text-purple-300 transition">
                         Support
                     </Link>
