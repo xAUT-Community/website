@@ -19,7 +19,6 @@ export const ServerCard: React.FC<ServerCardProps> = ({
                                                           version,
                                                           icon,
                                                       }) => {
-    // @ts-ignore
     return (
         <div
             className={`bg-gray-800 p-4 rounded-xl flex flex-col items-center text-center
