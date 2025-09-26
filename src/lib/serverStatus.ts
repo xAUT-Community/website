@@ -65,7 +65,8 @@ export async function getLS22Status(ip: string): Promise<LS22Status> {
 // ---------------------------
 // CSGO
 // ---------------------------
-export async function getCSGOStatus(ip: string, port: number): Promise<CSGOStatus> {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function getCSGOStatus(_ip: string, _port: number): Promise<CSGOStatus> {
     // Platzhalter: echte API / SteamQuery oder RCON implementieren
     return {
         online: true,
