@@ -23,6 +23,7 @@ export const teamMembers: TeamMember[] = [
         id: "2",
         name: "Marcel",
         avatar: "https://cdn.discordapp.com/avatars/1246477385046560892/8ebb249ea6be69f4f77a020cc6a80fcf.webp?size=512",
+        decoration: "https://cdn.jsdelivr.net/gh/itspi3141/discord-fake-avatar-decorations@main/public/decorations/jack_o_lantern.png",
         rank: "Owner",
         clanTag: "xAUT"
     },
@@ -30,6 +31,7 @@ export const teamMembers: TeamMember[] = [
         id: "3",
         name: "Noah",
         avatar: "https://cdn.discordapp.com/avatars/1408739495662190694/6b17c3160bb882182fb78a191c15a396.webp?size=512",
+        decoration: "https://cdn.jsdelivr.net/gh/itspi3141/discord-fake-avatar-decorations@main/public/decorations/cozy_cat.png",
         rank: "[xAUT] Community Freund",
         about: "Hat diese schöne Seite hier entwickelt!",
         clanTag: "xAUT"
@@ -38,6 +40,7 @@ export const teamMembers: TeamMember[] = [
         id: "4",
         name: "Jan",
         avatar: "https://cdn.discordapp.com/avatars/1005555166604431482/3247f5a0fdf4a6ea64804ceebaa5e5a9.webp?size=512",
+        decoration: "https://cdn.jsdelivr.net/gh/itspi3141/discord-fake-avatar-decorations@main/public/decorations/jack_o_lantern.png",
         rank: "[xAUT] Community Freund",
         clanTag: "xAUT"
     }
