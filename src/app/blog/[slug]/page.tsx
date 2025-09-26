@@ -2,15 +2,14 @@ import { exampleBlogPosts, BlogPost } from "@/lib/blog";
 import {Navbar} from "@/components/Navbar";
 
 interface BlogPageProps {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }
 
 // 1️⃣ Die Page als async deklarieren
 export default async function BlogDetailPage({ params }: BlogPageProps) {
     // 2️⃣ params direkt verwenden (Next.js verlangt async Function)
-    const post: BlogPost | undefined = exampleBlogPosts.find(
-        (p) => p.slug === params.slug
-    );
+    const { slug } = await params;
+    const post = exampleBlogPosts.find((p) => p.slug === slug);
 
     if (!post)
         return <p className="p-10 text-red-500">Beitrag nicht gefunden</p>;
