@@ -50,12 +50,13 @@ export const ServerCard: React.FC<ServerCardProps> = ({
             </p>
 
             {/* Spielerzahl */}
-            {players && type === "Minecraft" && "online" in players && (
+            {type === "Minecraft" && players && typeof players !== "number" && (
                 <p className="text-gray-300">
                     Spieler: {players.online} / {players.max}
                 </p>
             )}
-            {players && type !== "Minecraft" && typeof players === "number" && (
+
+            {type !== "Minecraft" && typeof players === "number" && (
                 <p className="text-gray-300">Spieler: {players}</p>
             )}
 
