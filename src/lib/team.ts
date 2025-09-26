@@ -4,7 +4,7 @@ export interface TeamMember {
     avatar: string;
     decoration?: string; // optional für Discord Overlay
     rank: string;
-    about: string;
+    about?: string;
     clanTag?: string; // Optional
 }
 
@@ -24,7 +24,6 @@ export const teamMembers: TeamMember[] = [
         name: "Marcel",
         avatar: "https://cdn.discordapp.com/avatars/1246477385046560892/8ebb249ea6be69f4f77a020cc6a80fcf.webp?size=512",
         rank: "Owner",
-        about: "Sorgt für Ordnung und hilft bei technischen Problemen.",
         clanTag: "xAUT"
     },
     {
@@ -40,7 +39,6 @@ export const teamMembers: TeamMember[] = [
         name: "Jan",
         avatar: "https://cdn.discordapp.com/avatars/1005555166604431482/3247f5a0fdf4a6ea64804ceebaa5e5a9.webp?size=512",
         rank: "[xAUT] Community Freund",
-        about: "Keine Bio hinterlegt.",
         clanTag: "xAUT"
     }
 ];

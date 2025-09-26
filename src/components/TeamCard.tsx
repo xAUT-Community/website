@@ -61,7 +61,9 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
                 {cleanRank}
             </p>
 
-            <p className="text-gray-300 text-sm">{member.about}</p>
+            <p className="text-gray-300 text-sm">
+                {member.about?.trim() ? member.about : "Keine Bio hinterlegt."}
+            </p>
         </div>
     );
 };
