@@ -30,6 +30,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
                     width={120}
                     height={120}
                     className="rounded-full border-2 border-purple-500 object-cover"
+                    unoptimized
                 />
 
                 {/* Discord Decoration falls vorhanden */}
