@@ -3,6 +3,7 @@
 import {Navbar} from "@/components/Navbar";
 import {Button} from "@/components/ui/Button";
 import {DiscordButton} from "@/components/DiscordButton";
+import {Footer} from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -18,6 +19,8 @@ export default function Home() {
                 </p>
                 <DiscordButton />
             </main>
+
+            <Footer />
         </>
     );
 }

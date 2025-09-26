@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/Button";
+import Image from "next/image";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,17 @@ export const Navbar = () => {
     return (
         <nav className="bg-gray-900 text-gray-100 shadow-md">
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
                 <Link href="/" className="text-2xl font-bold text-purple-400">
+
                     xAUT-Community.at
                 </Link>
+                <Image
+                    src="/assets/images/xAUT-LOGO.png"
+                    width={64}
+                    height={64}
+                    alt="this Logo"
+                />
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-6 items-center">
@@ -19,7 +28,7 @@ export const Navbar = () => {
                         Events
                     </Link>
                     <Link href="/blog" className="hover:text-purple-300 transition">
-                        News
+                        Blog
                     </Link>
                     <Link href="/servers" className="hover:text-purple-300 transition">
                         Server
@@ -48,7 +57,7 @@ export const Navbar = () => {
                         Events
                     </Link>
                     <Link href="/blog" className="block hover:text-purple-300 transition">
-                        News
+                        Blog
                     </Link>
                     <Link href="/servers" className="block hover:text-purple-300 transition">
                         Server

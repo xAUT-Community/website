@@ -20,4 +20,10 @@ export const exampleEvents: Event[] = [
         description: "Gemeinsam auf dem Server zocken",
         date: "2025-10-12T16:00:00Z",
     },
+    {
+        id: "3",
+        title: "Minecraft Server-Event",
+        description: "Gemeinsam einen Server aufbauen mit euch!",
+        date: "2025-10-15T16:00:00Z"
+    }
 ];
