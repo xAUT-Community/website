@@ -36,7 +36,7 @@ export const Navbar = () => {
                     <Link href="/support" className="hover:text-purple-300 transition">
                         Support
                     </Link>
-                    <Button onClick={() => window.open("https://discord.gg/deininvite", "_blank")}>
+                    <Button onClick={() => window.open("https://discord.gg/WU3JpwAaAC", "_blank")}>
                         Discord
                     </Button>
                 </div>
@@ -65,7 +65,7 @@ export const Navbar = () => {
                     <Link href="/support" className="block hover:text-purple-300 transition">
                         Support
                     </Link>
-                    <Button onClick={() => window.open("https://discord.gg/deininvite", "_blank")}>
+                    <Button onClick={() => window.open("https://discord.gg/WU3JpwAaAC", "_blank")}>
                         Discord
                     </Button>
                 </div>

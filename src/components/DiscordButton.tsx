@@ -8,7 +8,7 @@ export const DiscordButton = () => {
         <>
 
 
-        <Button onClick={() => window.open("https://discord.gg/2pKrubFq6c", "_blank")}>
+        <Button onClick={() => window.open("https://discord.gg/WU3JpwAaAC", "_blank")}>
             Trete der xAUT bei
         </Button>
         </>
