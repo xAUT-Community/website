@@ -16,6 +16,8 @@ export default async function ServersPage() {
         getETS2Status("ets.server.to", 1),
     ]);
 
+    const jdBros = await getBedrockStatus("play.jdbros.de", 19132);
+
     // 2️⃣ Server nach Typ gruppieren
     const serversByType = {
         Minecraft: [
@@ -44,6 +46,13 @@ export default async function ServersPage() {
                 players: lbsg.players,
                 version: lbsg.version,
             },
+            {
+                name: "JDBros",
+                type: "Bedrock" as const,
+                online: jdBros.online,
+                players: jdBros.players,
+                version: jdBros.version,
+            }
         ],
         ETS2: [
             {
