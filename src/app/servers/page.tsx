@@ -17,6 +17,7 @@ export default async function ServersPage() {
     ]);
 
     const jdBros = await getBedrockStatus("play.jdbros.de", 19132);
+    const grieferGames = await getMinecraftStatus("GrieferGames.net");
 
     // 2️⃣ Server nach Typ gruppieren
     const serversByType = {
