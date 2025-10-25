@@ -13,7 +13,7 @@ export const teamMembers: TeamMember[] = [
     {
         id: "1",
         name: "Killian",
-        avatar: "https://cdn.discordapp.com/avatars/924429335211945985/5cf06b0232c084d7d796b2b2e8b0ccfe.webp?size=512",
+        avatar: "https://images-ext-1.discordapp.net/external/pHDsHe4joVv2zaqXF1dQy4ysL1HowFpi-usndcxLj_s/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/924429335211945985/9ea5b5055527ce216790c911f67d32c6.png?format=webp&quality=lossless&width=819&height=819",
         decoration: "https://cdn.discordapp.com/avatar-decoration-presets/a_db9baf0ba7cf449d2b027c06309dbe8d?size=512",
         rank: "Owner",
         about: "Gründer der Community, organisiert Events & Server.",
